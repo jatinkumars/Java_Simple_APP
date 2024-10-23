@@ -19,7 +19,7 @@ public class UserDetailsController {
 
     @PostMapping("/users")
     public ResponseEntity<UserDetails> saveUserDetails(@RequestBody UserDetailsDTO userDetailsDTO) {
-        return new ResponseEntity<>(userDetailsService.saveuserDetails(userDetailsDTO), HttpStatus.OK);
+        return new ResponseEntity<>(userDetailsService.saveuserDetails(userDetailsDTO), HttpStatus.CREATED);
     }
 
     @GetMapping("/users/{id}")
